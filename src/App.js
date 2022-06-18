@@ -1,10 +1,14 @@
+// Component
+import Navbar from "./Component/Navbar";
+import Filterbar from "./Component/Filterbar";
 
 function App() {
   return (
     <>
-      an
+      <Navbar/>
+      <Filterbar/>
     </>
   );
 }
 
-export default App;                 
+export default App;             

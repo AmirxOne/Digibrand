@@ -1,0 +1,56 @@
+
+@font-face {
+  font-family: "Iranyekan";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../src/Fonts/IRANYekanWebBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Iranyekan";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../src/Fonts/IRANYekanWebThin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Iranyekan";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../src/Fonts/IRANYekanWebLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Iranyekan";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../src/Fonts/IRANYekanWebMedium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Iranyekan";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../src/Fonts/IRANYekanWebBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Iranyekan";
+  font-style: normal;
+  font-weight: 850;
+  src: url("../src/Fonts/IRANYekanWebBlack.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Iranyekan";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../src/Fonts/IRANYekanWebExtraBlack.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Iranyekan";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../src/Fonts/IRANYekanWebRegular.ttf") format("truetype");
+}
