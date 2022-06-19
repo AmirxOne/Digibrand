@@ -2,38 +2,28 @@ import React from "react";
 
 const Filterbar = () => {
   return (
-    <div className="mt-4 w-full h-9 px-5 flex gap-x-4 items-center justify-center">
-      <button className=" px-2 flex items-center justify-start bg-stone-50 h-full rounded text-sm font-light shadow-md">
+    <div className="md:hidden mt-4 mb-3 w-full h-9 px-5 flex gap-x-2 items-center justify-between">
+      <button className="flex px-2 items-center justify-start bg-stone-50 h-full rounded text-sm font-light shadow-md w-[45%]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6 text-orange-600"
+          className="h-6 w-6 text-orange-600"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          stroke-width="2"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4"
-          />
+          <path d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4"/>
         </svg>
         <span className="ml-2 text-slate-800">Favorites</span>
       </button>
-      <button className=" px-2 flex items-center justify-start bg-stone-50 h-full rounded text-sm font-light shadow-md">
+      <button className="flex px-2 items-center justify-start bg-stone-50 h-full rounded text-sm font-light shadow-md w-[55%]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5 text-gray-300"
+          className="h-5 w-5 text-gray-300"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          stroke-width="2"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
-          />
+          <path d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"/>
         </svg>
         <span className="ml-2 text-slate-800">Filter : samsung</span>
       </button>
