@@ -27,7 +27,10 @@ const StoreProduct = ({data}) => {
             <div className='w-full h-[45%] flex flex-col justify-between px-2'>
                 <div className=' flex justify-between items-center h-1/5 mt-2'>
                     <div className='text-slate-300 text-xs'>{data.brand}</div>
-                    <div className='flex flex-row-reverse'>{data.color.map(col => <span key={col} className="bg-cyan-600 w-5 h-5 rounded-full ring-1 -m-[2px] ring-white flex"></span>)}</div>
+                    <div className='flex flex-row-reverse'>{data.color.map(col => 
+                        <svg key={col} xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 -m-[5px] rounded-full" fill={col} viewBox="0 0 24 24" stroke={col} strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>)}</div>
                 </div>
                 <div className='flex flex-col justify-center items-start mt-2  h-2/5 '>
                     <div className=' flex flex-col text-xs font-medium text-slate-900'>{data.title}</div>

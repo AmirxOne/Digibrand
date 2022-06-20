@@ -18,3 +18,8 @@ body{
         width: 50%;
     }
 }
+@layer components {
+    .b {
+      @apply h-full rounded-lg px-3 flex items-center justify-center font-light text-slate-900;
+    }
+  }
