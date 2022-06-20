@@ -10,7 +10,7 @@ const Store = () => {
     console.log(products)
 
     return (
-        <div className="py-5 bg-slate-400 w-full h-[460px] px-5 grid grid-cols-1 gap-x-2 gap-y-4">
+        <div className="py-2 px-5 md:px-0 w-full grid grid-cols-1 s:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-2 gap-y-4">
             {
                 products.map(product => <StoreProduct key={product.id} data={product}/> )
             }

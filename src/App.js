@@ -1,7 +1,8 @@
 // Component
 import Navbar from "./Component/Navbar";
 import Filterbar from "./Component/Filterbar";
-import Store from "./Component/Store";
+import Main from "./Component/Main";
+// Context
 import ContextProducts from "./context/ContextProducts";
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
       <ContextProducts>
         <Navbar />
         <Filterbar />
-        <Store />
+        <Main />
       </ContextProducts>
     </>
   );

@@ -3,7 +3,7 @@ import React from "react";
 const Filterbar = () => {
   return (
     <div className="md:hidden mt-4 mb-3 w-full h-9 px-5 flex gap-x-2 items-center justify-between">
-      <button className="flex px-2 items-center justify-start bg-stone-50 h-full rounded text-sm font-light shadow-md w-[45%]">
+      <button className="flex px-2 items-center justify-start bg-stone-50 h-full rounded text-sm font-light shadow-md w-[45%] s:w-[50%]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6 text-orange-600"
@@ -15,7 +15,7 @@ const Filterbar = () => {
         </svg>
         <span className="ml-2 text-slate-800">Favorites</span>
       </button>
-      <button className="flex px-2 items-center justify-start bg-stone-50 h-full rounded text-sm font-light shadow-md w-[55%]">
+      <button className="flex px-2 items-center justify-start bg-stone-50 h-full rounded text-sm font-light shadow-md w-[55%] s:w-[50%]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-5 w-5 text-gray-300"
