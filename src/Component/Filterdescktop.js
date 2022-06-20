@@ -23,10 +23,10 @@ const Filterdescktop = () => {
         </svg>
       </div>
       <button onClick={() => setAdd(0)} className={add === 0 ? 'b bg-orange-100' : 'b hover:bg-orange-100'}>All</button>
-      <button onClick={() => setAdd(1)} className={add === 1 ? 'b bg-orange-100' : 'b hover:bg-orange-100'}>The Most Popular Products</button>
-      <button onClick={() => setAdd(2)} className={add === 2 ? 'b bg-orange-100' : 'b hover:bg-orange-100'}>The Most Visited Products</button>
-      <button onClick={() => setAdd(3)} className={add === 3 ? 'b bg-orange-100' : 'b hover:bg-orange-100'}>The Most Expensive Products</button>
-      <button onClick={() => setAdd(4)} className={add === 4 ? 'b bg-orange-100' : 'b hover:bg-orange-100'}>The Most Cheapest Products</button>
+      <button onClick={() => setAdd(1)} className={add === 1 ? 'b bg-orange-100' : 'b hover:bg-orange-100'}>Popular Products</button>
+      <button onClick={() => setAdd(2)} className={add === 2 ? 'b bg-orange-100' : 'b hover:bg-orange-100'}>Visited Products</button>
+      <button onClick={() => setAdd(3)} className={add === 3 ? 'b bg-orange-100' : 'b hover:bg-orange-100'}>Expensive Products</button>
+      <button onClick={() => setAdd(4)} className={add === 4 ? 'b bg-orange-100' : 'b hover:bg-orange-100'}>Cheapest Products</button>
     </div>
   );
 };
