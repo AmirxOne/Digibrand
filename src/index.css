@@ -18,14 +18,8 @@ body{
         width: 50%;
     }
 }
-@media (max-width: 1024px) {
-    .plg\:text-xs {
-        font-size: 0.8rem/* 12px */;
-        line-height: 1.5rem/* 16px */;
-    }
-}
 @layer components {
     .b {
-      @apply h-full rounded-lg px-3 flex items-center justify-center font-light text-slate-900 plg:text-xs;
+      @apply h-10 text-xs lg:text-sm xl:text-base rounded-lg px-3 flex items-center justify-center font-light text-slate-900;
     }
   }

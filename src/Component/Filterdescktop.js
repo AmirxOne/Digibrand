@@ -6,10 +6,10 @@ const Filterdescktop = () => {
 
   return (
     <div className="bg-stone-50 rounded-lg shadow-md flex items-center py-[6px] px-3 gap-x-2">
-      <div className="h-full w-10 rounded-lg bg-orange-100 flex justify-center items-center">
+      <div className="h-10 w-16 mid:w-12 rounded-lg bg-orange-100 flex justify-center items-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 text-orange-400"
+          className="h-5 w-5 text-orange-400 lg:h-6 lg:w-6"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -30,6 +30,5 @@ const Filterdescktop = () => {
     </div>
   );
 };
-//h-full rounded-lg px-2 flex items-center justify-center font-light text-slate-900 hover:bg-orange-100
 
 export default Filterdescktop;

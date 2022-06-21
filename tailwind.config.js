@@ -6,7 +6,15 @@ module.exports = {
       fontFamily:{
         sans: ["Iranyekan"],
       },
+      screens: {
+        'mid': '900px',
+        'xlup': '1300px',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/forms")({
+      strategy: "class",
+    }),
+  ],
 }
