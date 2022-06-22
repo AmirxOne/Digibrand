@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+// react router dom
+import {Link} from 'react-router-dom'
 
 const StoreProduct = ({data}) => {
 
@@ -36,7 +38,7 @@ const StoreProduct = ({data}) => {
                     <div className=' flex flex-col text-xs font-medium text-slate-900'>{data.title}</div>
                     <div className='mt-2 text-orange-600'>€{data.price}</div>
                 </div>
-                <div className='h-[25%] w-full flex items-end justify-center mt-2 font text-orange-400 text-base border-t-2 border-slate-200 cursor-pointer'>View And Order</div>
+                <Link to={`/products/${data.id}`} className='h-[25%] w-full flex items-end justify-center mt-2 font text-orange-400 text-base border-t-2 border-slate-200 cursor-pointer'>View And Order</Link>
             </div>
         </div>
     );

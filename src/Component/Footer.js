@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div className='hidden md:flex flex-col lg:flex-row items-center justify-between mt-10 px-20 py-10 bg-gradient-to-t from-orange-300 to-gray-100'>
+        <div className='hidden md:flex flex-col lg:flex-row items-center justify-between mt-10 px-20 py-10 bg-gradient-to-t from-orange-200 to-gray-100'>
             <div className='flex flex-col items-center lg:items-start justify-between'>
                 <div>Berand</div>
                 <p className='w-[500px] mt-10 text-center lg:text-left'>
