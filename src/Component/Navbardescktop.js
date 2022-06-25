@@ -10,9 +10,9 @@ const Navbardescktop = () => {
 
     return (
             <div className='w-full px-4 h-14 mb-4 hidden md:flex items-center justify-center'>
-                <div className='fixed top-0 left-0 z-10 bg-stone-50 w-full px-4 py-3 h-14 shadow-lg flex items-center'>
+                <div className=' max-w-[1536px] mx-auto fixed top-0 z-10 bg-stone-50 w-full px-4 py-3 h-14 shadow-lg flex items-center'>
                     <ul className='h-full flex items-center justify-center gap-x-2 text-slate-800'>
-                        <li className='px-4 mr-4 h-full flex items-center justify-center ring-1 ring-slate-800 r rounded-lg'>Brand</li>
+                        <li className='px-4 mr-4 h-full flex items-center justify-center font-extrabold rounded-lg'>Brand</li>
                         <li className='px-4 h-full overflow-hidden rounded-lg flex items-center justify-center hover:bg-slate-100'><a className='text-sm w-full h-full flex items-center justify-center' href="#">Home</a></li>
                         <li className='px-4 h-full overflow-hidden rounded-lg flex items-center justify-center hover:bg-slate-100'><a className='text-sm w-full h-full flex items-center justify-center' href="#">Phone</a></li>
                         <li className='px-4 h-full overflow-hidden rounded-lg flex items-center justify-center hover:bg-slate-100'><a className='text-sm w-full h-full flex items-center justify-center' href="#">Laptap</a></li>
