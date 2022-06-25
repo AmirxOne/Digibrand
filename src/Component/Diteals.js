@@ -1,9 +1,14 @@
-import React,{useEffect,useState} from 'react';
+import React,{useEffect,useState, useContext} from 'react';
 import Sidebar from './Sidebar';
-//Axios
+// Axios
 import axios from 'axios';
-//react router dom
+// react router dom
 import {useParams} from 'react-router-dom'
+// context
+import { CartContext } from '../context/ContextCart';
+// function
+import { quntityCounter } from '../functions/QuntityCounter';
+import { isInProduct } from '../functions/isInProduct';
 
 const Diteals = () => {
 
@@ -54,6 +59,8 @@ const Diteals = () => {
 
         setClick(index)
     }
+
+    const { state, dispatch } = useContext(CartContext)
     
 
     return (
@@ -117,7 +124,19 @@ const Diteals = () => {
 
                             <div className='flex flex-col items-center justify-center w-full mt-10'>
                                 <span className='text-3xl text-orange-700 ml-2'>€{productD.price}</span>
-                                <button className='bg-orange-400 rounded-lg w-60 h-10 text-orange-50 flex items-center justify-center mt-4 '>Add to Cart</button>
+                                {
+                                    quntityCounter(state, productD.id) > 1 && 
+                                    <button onClick={() => dispatch({type:"DOWN" , payload: productD})} className='bg-orange-400 rounded-lg w-60 h-10 text-orange-50 flex items-center justify-center mt-4 '>-</button> 
+                                }
+                                {
+                                    quntityCounter(state, productD.id) === 1 && 
+                                    <button onClick={() => dispatch({type:"REMOVE" , payload: productD})} className='bg-orange-400 rounded-lg w-60 h-10 text-orange-50 flex items-center justify-center mt-4 '>remove</button> 
+                                }
+                                {
+                                    isInProduct(state, productD.id) ? 
+                                    <button onClick={() => dispatch({tupe:"UP", payload:productD})} className='bg-orange-400 rounded-lg w-60 h-10 text-orange-50 flex items-center justify-center mt-4 '>+</button> :
+                                    <button onClick={() => dispatch({tupe:"ADD", payload:productD})} className='bg-orange-400 rounded-lg w-60 h-10 text-orange-50 flex items-center justify-center mt-4 '>Add to Cart</button>
+                                }
                             </div>
                         </div>
                     </div>

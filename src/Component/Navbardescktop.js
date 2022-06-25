@@ -1,4 +1,6 @@
 import React,{useState} from 'react';
+// react router dom
+import {Link} from "react-router-dom"
 
 const Navbardescktop = () => {
 
@@ -26,11 +28,13 @@ const Navbardescktop = () => {
                         </a>   
                         <input className='outline-none h-full w-56  text-sm font-light bg-gray-200 rounded-lg pl-10 pr-4 placeholder:text-gray-400 caret-slate-500 ' placeholder='Search product ...' type="text" value={text} onChange={chengeHandler}/>
                         <div className='relative '>
+                            <Link to='cart'>
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mr-5 fill-orange-400" viewBox="0 0 20 20" fill="currentColor">
                                 <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z" />
                                 <path fillRule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clipRule="evenodd" />
                             </svg>
                             <span className='absolute pt-[3px] text-center w-5 h-5 text-xs bg-orange-200 rounded-full top-[-3px] left-[-3px] text-slate-800'>0</span>
+                            </Link>
                         </div>
                     </div>
                 </div>
