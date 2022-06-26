@@ -13,17 +13,37 @@ const Navbardescktop = () => {
         setText(event.target.value)
     }
 
-    const {state} = useContext(CartContext)
+    const {state} = useContext(CartContext);
+
+    const datas = [
+        {
+            id:1,
+            navTitle:"Home",
+            link:"/products"
+        },
+        {
+            id:2,
+            navTitle:"Phone",
+            link:"/products"
+        },
+        {
+            id:3,
+            navTitle:"Laptap",
+            link:"/products"
+        },
+        {
+            id:4,
+            navTitle:"Watch",
+            link:"/products"
+        },
+    ];
 
     return (
             <div className='w-full px-4 h-14 mb-4 hidden md:flex items-center justify-center'>
                 <div className=' max-w-[1536px] mx-auto fixed top-0 z-10 bg-stone-50 w-full px-4 py-3 h-14 shadow-lg flex items-center'>
                     <ul className='h-full flex items-center justify-center gap-x-2 text-slate-800'>
-                        <li className='px-4 mr-4 h-full flex items-center justify-center font-extrabold rounded-lg'>Brand</li>
-                        <li className='px-4 h-full overflow-hidden rounded-lg flex items-center justify-center hover:bg-slate-100'><a className='text-sm w-full h-full flex items-center justify-center' href="#">Home</a></li>
-                        <li className='px-4 h-full overflow-hidden rounded-lg flex items-center justify-center hover:bg-slate-100'><a className='text-sm w-full h-full flex items-center justify-center' href="#">Phone</a></li>
-                        <li className='px-4 h-full overflow-hidden rounded-lg flex items-center justify-center hover:bg-slate-100'><a className='text-sm w-full h-full flex items-center justify-center' href="#">Laptap</a></li>
-                        <li className='px-4 h-full overflow-hidden rounded-lg flex items-center justify-center hover:bg-slate-100'><a className='text-sm w-full h-full flex items-center justify-center' href="#">Watch</a></li>
+                        <li className='px-4 mr-4 h-full flex items-center justify-center font-extrabold rounded-lg cursor-pointer'><Link to="/products">Brand</Link></li>
+                        {datas.map((data , i) => <li key={data.id} className='px-4 h-full overflow-hidden rounded-lg flex items-center justify-center hover:bg-slate-100'><Link className='text-sm w-full h-full flex items-center justify-center' to={data.link}>{data.navTitle}</Link></li> )}
                     </ul>
                     <div className='h-10 flex items-center justify-between ml-4 relative w-full'>
                         <a className='absolute w-10 h-full top-0 left-0 flex justify-center' href='#'>

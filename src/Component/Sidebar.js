@@ -1,10 +1,13 @@
 import React from "react";
 import Example from "../Component/Example";
+// images
+import s1 from '../img/gsmarena_000.jpg';
+import s2 from '../img/gsmarena_001.jpg';
 
 const Sidebar = () => {
   return (
       <div className='hidden md:grid pl-5 md:col-span-4 row-span-2 mid:col-span-3 xlup:col-span-2'>
-        <div>
+        <div className="">
           <div className="w-full py-10 px-2 bg-stone-50 rounded-lg shadow-lg ">
             <div className="text-orange-500 font-extrabold px-2">Grouping</div>
             <ul className="flex flex-col gap-">
@@ -64,6 +67,22 @@ const Sidebar = () => {
               <div className="text-orange-500 font-extrabold px-2">Filter</div>
             </div>
             <Example />
+          </div>
+          <div className="bg-slate-50 cursor-pointer w-full mt-5 overflow-hidden rounded-lg shadow-md">
+            <img src={s1}/>
+            <div className="px-3 py-5">
+              <span className="font-light">
+                  Pixel 7 Pro's display will be brighter than the 6 Pro panel, source code reveals.
+              </span>
+            </div>
+          </div>
+          <div className="bg-slate-50 cursor-pointer w-full mt-5 overflow-hidden rounded-lg shadow-md">
+            <img src={s2}/>
+            <div className="px-3 py-5">
+              <span className="font-light">
+                  Realme UI 3.0 open beta announced for Narzo 30 Pro 5G.
+              </span>
+            </div>
           </div>
         </div>
       </div>
