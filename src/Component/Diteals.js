@@ -124,19 +124,34 @@ const Diteals = () => {
 
                             <div className='flex flex-col items-center justify-center w-full mt-10'>
                                 <span className='text-3xl text-orange-700 ml-2'>€{productD.price}</span>
+                                <div className='flex flex-row items-center justify-center w-60 h-10 mt-4'>
                                 {
                                     quntityCounter(state, productD.id) > 1 && 
-                                    <button onClick={() => dispatch({type:"DOWN" , payload: productD})} className='bg-orange-400 rounded-lg w-60 h-10 text-orange-50 flex items-center justify-center mt-4 '>-</button> 
+                                    <button onClick={() => dispatch({type:"DOWN" , payload: productD})} className='bg-orange-400 rounded-lg w-24 h-10 text-orange-50 flex items-center justify-center mr-4'>
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z" />
+                                        </svg>
+                                    </button> 
                                 }
                                 {
                                     quntityCounter(state, productD.id) === 1 && 
-                                    <button onClick={() => dispatch({type:"REMOVE" , payload: productD})} className='bg-orange-400 rounded-lg w-60 h-10 text-orange-50 flex items-center justify-center mt-4 '>remove</button> 
+                                    <button onClick={() => dispatch({type:"REMOVE" , payload: productD})} className='bg-orange-400 rounded-lg w-24 h-10 text-orange-50 flex items-center justify-center mr-4'>
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    </button> 
                                 }
+                                {<span className='text-slate-800 font-light'>{quntityCounter(state, productD.id)}</span>}
                                 {
                                     isInProduct(state, productD.id) ? 
-                                    <button onClick={() => dispatch({tupe:"UP", payload:productD})} className='bg-orange-400 rounded-lg w-60 h-10 text-orange-50 flex items-center justify-center mt-4 '>+</button> :
-                                    <button onClick={() => dispatch({tupe:"ADD", payload:productD})} className='bg-orange-400 rounded-lg w-60 h-10 text-orange-50 flex items-center justify-center mt-4 '>Add to Cart</button>
+                                    <button onClick={() => dispatch({type:"UP", payload:productD})} className='bg-orange-400 rounded-lg w-24 h-10 text-orange-50 flex items-center justify-center ml-4'>
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z" />
+                                        </svg>
+                                    </button> :
+                                    <button onClick={() => dispatch({type:"ADD", payload:productD})} className='bg-orange-400 rounded-lg w-60 h-10 text-orange-50 flex items-center justify-center transition-all duration-500 '>Add to Cart</button>
                                 }
+                                </div>
                             </div>
                         </div>
                     </div>

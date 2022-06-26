@@ -1,6 +1,9 @@
-import React,{useState} from 'react';
+import React,{useState, useContext} from 'react';
 // react router dom
 import {Link} from "react-router-dom"
+// contex
+import { CartContext } from '../context/ContextCart';
+
 
 const Navbardescktop = () => {
 
@@ -9,6 +12,8 @@ const Navbardescktop = () => {
     const chengeHandler = (event) => {
         setText(event.target.value)
     }
+
+    const {state} = useContext(CartContext)
 
     return (
             <div className='w-full px-4 h-14 mb-4 hidden md:flex items-center justify-center'>
@@ -33,7 +38,8 @@ const Navbardescktop = () => {
                                 <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z" />
                                 <path fillRule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clipRule="evenodd" />
                             </svg>
-                            <span className='absolute pt-[3px] text-center w-5 h-5 text-xs bg-orange-200 rounded-full top-[-3px] left-[-3px] text-slate-800'>0</span>
+                            <div>{state.itemCounter ? <span className='absolute pt-[3px] text-center w-5 h-5 text-xs bg-orange-200 rounded-full top-[-3px] left-[-3px] text-slate-800'>{state.itemCounter}</span> : ""}</div>
+                            
                             </Link>
                         </div>
                     </div>
