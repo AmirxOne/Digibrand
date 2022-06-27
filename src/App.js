@@ -17,6 +17,7 @@ function App() {
     <div className="max-w-[1536px] mx-auto">
       <ContextProducts>
         <ContextCart>
+          <Navbardescktop>
           <Navbardescktop/>
           <Navbar />
           <Filterbar />
@@ -27,6 +28,7 @@ function App() {
             <Route path="/*" element={<Navigate to="/products"/>}/>
           </Routes>
           <Footer/>
+          </Navbardescktop>
         </ContextCart>
       </ContextProducts>
     </div>

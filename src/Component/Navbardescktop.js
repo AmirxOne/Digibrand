@@ -4,8 +4,9 @@ import {Link} from "react-router-dom"
 // contex
 import { CartContext } from '../context/ContextCart';
 
+export const serchContext = React.createContext();
 
-const Navbardescktop = () => {
+const Navbardescktop = ({children}) => {
 
     const [text, setText] = useState("");
 
@@ -39,6 +40,10 @@ const Navbardescktop = () => {
     ];
 
     return (
+        <>
+            <serchContext.Provider value={{text, setText}}>
+                {children}
+            </serchContext.Provider>
             <div className='w-full px-4 h-14 mb-4 hidden md:flex items-center justify-center'>
                 <div className=' max-w-[1536px] mx-auto fixed top-0 z-10 bg-stone-50 w-full px-4 py-3 h-14 shadow-lg flex items-center'>
                     <ul className='h-full flex items-center justify-center gap-x-2 text-slate-800'>
@@ -65,6 +70,7 @@ const Navbardescktop = () => {
                     </div>
                 </div>
             </div>
+        </>    
     );
 };
 
