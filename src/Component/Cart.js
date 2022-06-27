@@ -10,16 +10,16 @@ const Cart = ({cartData}) => {
 
     const {image, title, price, quntity} = cartData
     return (
-        <div className='h-32 flex bg-stone-50 shadow-md px-5 justify-between rounded-lg mb-4'>
-            <div className='flex'>
+        <div className=' flex flex-col sm:flex-row bg-stone-50 shadow-md px-5 justify-between items-center rounded-lg mb-4'>
+            <div className='flex flex-col sm:flex-row items-center'>
                 <div className='w-32 flex items-center justify-center'>
                     <img className='scale-[0.8]' src={image} alt=""/>
                 </div>
-                <div className='flex flex-col px-5 py-5 items-start justify-between'>
-                    <span className='text-slate-800 text-lg'>{title}</span>
-                    <span className='text-orange-700 text-lg'>€ {price}</span>
+                <div className='flex flex-col px-5 py-5 sm:items-start items-center justify-center'>
+                    <span className='text-slate-800 text-base lg:text-lg'>{title}</span>
+                    <span className='text-orange-700 text-lg mt-4 sm:mt-0'>€ {price}</span>
                 </div>
-             </div>
+            </div>
              <div className='flex flex-col items-center justify-center px-5 py-5 relative'>
                 <div onClick={() => dispatch({type:"REMOVE" ,payload :cartData})} className='h-[20px]  flex justify-end cursor-pointer absolute top-1 -right-4'>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 stroke-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>

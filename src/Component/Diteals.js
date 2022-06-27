@@ -63,6 +63,15 @@ const Diteals = () => {
 
   const { state, dispatch } = useContext(CartContext);
 
+  const [color, setColor] = useState(false);
+
+  const toggelColor = (i) => {
+    if(color === i){
+      return setColor(null);
+    }
+    setColor(i)
+  }
+
   return (
     <>
       {productD.length !== 0 ? (
@@ -83,10 +92,23 @@ const Diteals = () => {
                   </span>
                   <span className="text-gray-300 ">{productD.brand}</span>
                 </div>
-                <div className="flex mt-10 items-center justify-center">
-                  <span>Color Selection :</span>
+
+                {/* color section */}
+
+                <div className="flex flex-col mt-10 md:items-start items-center justify-center">
+                  <span className="text-sm font-normal">Color Selection</span>
+                  <div className="flex mt-3 items-center justify-center">
+                    {
+                      productD.color.map((item,i) =>
+                        <svg onClick={() => toggelColor(i)} key={item} xmlns="http://www.w3.org/2000/svg" className={color === i ? "rounded-full cursor-pointer h-7 w-7 border border-slate-800" : "cursor-pointer h-7 w-7"} fill={item} viewBox="0 0 24 24" stroke={item} strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      )}
+                  </div>
                 </div>
-                <div className="mt-10 flex flex-col md:items-start items-center justify-center">
+
+                {/* Product Features */}
+                <div className="mt-10 flex flex-col md:items-start items-center justify-centermd:items-start items-center justify-center">
                   <span className="text-sm font-normal">Product Features</span>
                   <diV className="flex font-light text-slate-800 text-xs mt-2">
                     <span className="w-1 h-1 rounded-full bg-orange-600 mr-1 mt-1"></span>
@@ -286,21 +308,21 @@ const Diteals = () => {
               {datas.map((data, index) => (
                 <div
                   key={data.id}
-                  className=" mb-10 mt-10 w-full flex flex-col justify-center md:px-20 py-5 "
+                  className=" mb-5 mt-5 w-full flex flex-col justify-center md:px-20 py-5 "
                 >
                   <span className="text-3xl font-medium">{data.title}</span>
                   <div
                     className={
                       click === index
-                        ? "mt-8 text-lg font-light overflow-hidden text-ellipsis whitespace-normal"
-                        : "mt-8 text-lg font-light overflow-hidden text-ellipsis whitespace-nowrap"
+                        ? "mt-5 text-lg font-light overflow-hidden text-ellipsis whitespace-normal"
+                        : "mt-5 text-lg font-light overflow-hidden text-ellipsis whitespace-nowrap"
                     }
                   >
                     {data.dis}
                   </div>
                   <button
                     onClick={() => toggle(index)}
-                    className="text-orange-500 flex items-center justify-start"
+                    className="text-orange-300 flex items-center justify-start"
                   >
                     {click === index ? "... Fewer" : "more ..."}
                   </button>

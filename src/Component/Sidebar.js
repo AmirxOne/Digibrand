@@ -69,7 +69,7 @@ const Sidebar = () => {
             <Example />
           </div>
           <div className="bg-slate-50 cursor-pointer w-full mt-5 overflow-hidden rounded-lg shadow-md">
-            <img src={s1}/>
+            <img src={s1} alt=""/>
             <div className="px-3 py-5">
               <span className="font-light">
                   Pixel 7 Pro's display will be brighter than the 6 Pro panel, source code reveals.
@@ -77,7 +77,7 @@ const Sidebar = () => {
             </div>
           </div>
           <div className="bg-slate-50 cursor-pointer w-full mt-5 overflow-hidden rounded-lg shadow-md">
-            <img src={s2}/>
+            <img src={s2} alt=""/>
             <div className="px-3 py-5">
               <span className="font-light">
                   Realme UI 3.0 open beta announced for Narzo 30 Pro 5G.

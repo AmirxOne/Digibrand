@@ -16,12 +16,14 @@ const CartProducts = () => {
     const { state, dispatch } = useContext(CartContext);
 
     return (
-        <div className='flex justify-center items-start gap-4 mt-10'>
-            <div className=' w-[800px] rounded-lg overflow-hidden gap-y-4'>
+        <div className='flex w-full justify-center items-center mt-10 px-5 flex-col lg:flex-row lg:items-start '>
+
+            <div className=' w-[320px] rounded-lg overflow-hidden px-4 mid:w-[800px] md:w-[700px] sm:w-[600px]'>
                 {state.itemCounter > 0 && <span className='px-5 py-5 text-xl font-medium block'>Cart</span>}
                 {state.selectItem.map(item => <Cart key={item.id} cartData={item}/>)}
             </div>
-            <div className=' w-[400px] rounded-lg relative'>
+
+            <div className=' w-[400px] rounded-lg relative scale-[0.72] sm:scale-100'>
                 {state.itemCounter > 0 && 
                 <>
                      <div className='flex flex-col w-[400px] h-[450px] mt-[70px] rounded-lg gap-y-3'>
