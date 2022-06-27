@@ -18,16 +18,16 @@ function App() {
       <ContextProducts>
         <ContextCart>
           <Navbardescktop>
-          <Navbardescktop/>
-          <Navbar />
-          <Filterbar />
-          <Routes>
-            <Route path="/cart" element={<CartProducts/>}/>
-            <Route path="/products/:id" element={<Diteals />}/>
-            <Route path="/products" element={<Main />}/>
-            <Route path="/*" element={<Navigate to="/products"/>}/>
-          </Routes>
-          <Footer/>
+              <Navbardescktop/>
+              <Navbar />
+              <Filterbar />
+              <Routes>
+                <Route path="/cart" element={<CartProducts/>}/>
+                <Route path="/products/:id" element={<Diteals />}/>
+                <Route path="/products" element={<Main />}/>
+                <Route path="/*" element={<Navigate to="/products"/>}/>
+              </Routes>
+            <Footer/>
           </Navbardescktop>
         </ContextCart>
       </ContextProducts>

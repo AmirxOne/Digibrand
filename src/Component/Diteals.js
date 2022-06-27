@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import Sidebar from "./Sidebar";
+
 // Axios
 import axios from "axios";
 // react router dom
@@ -26,7 +26,8 @@ const Diteals = () => {
     };
 
     getApi();
-  }, []);
+
+  }, [id]);
 
   const datas = [
     {

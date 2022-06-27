@@ -51,11 +51,11 @@ const Navbardescktop = ({children}) => {
                         {datas.map((data , i) => <li key={data.id} className='px-4 h-full overflow-hidden rounded-lg flex items-center justify-center hover:bg-slate-100'><Link className='text-sm w-full h-full flex items-center justify-center' to={data.link}>{data.navTitle}</Link></li> )}
                     </ul>
                     <div className='h-10 flex items-center justify-between ml-4 relative w-full'>
-                        <a className='absolute w-10 h-full top-0 left-0 flex justify-center' href='#'>
+                        <Link className='absolute w-10 h-full top-0 left-0 flex justify-center' to='#'>
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 stroke-slate-400 mt-2" fill="none" viewBox="0 0 22 22" stroke="currentColor" strokeWidth={1}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
-                        </a>   
+                        </Link>   
                         <input className='outline-none h-full w-56  text-sm font-light bg-gray-200 rounded-lg pl-10 pr-4 placeholder:text-gray-400 caret-slate-500 ' placeholder='Search product ...' type="text" value={text} onChange={chengeHandler}/>
                         <div className='relative '>
                             <Link to='cart'>
