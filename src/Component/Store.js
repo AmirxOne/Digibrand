@@ -4,6 +4,7 @@ import StoreProduct from './StoreProduct';
 // Context
 import { productsContext } from '../context/ContextProducts';
 import { serchContext } from './Navbardescktop';
+import { filterContext } from '../context/ContextFilter';
 
 
 const Store = () => {
@@ -11,13 +12,15 @@ const Store = () => {
     const products = useContext(productsContext);
 
     const {text} = useContext(serchContext);
-   
+
+    const {name} = useContext(filterContext);
+    console.log(name)
     
 
-    const name = "" // filter check box 
+     // filter check box 
 
     const searchProduct = products.filter(product => product.title.toLowerCase().includes(text.toLowerCase()));
-    const checkProduct = products.filter(product => product.brand.toLowerCase().includes(name));// filter check box 
+    const checkProduct = products.filter(product => product.brand.toLowerCase().includes(name.toLowerCase()));// filter check box 
     
     return (
         <>
@@ -39,7 +42,7 @@ const Store = () => {
                                 text.length === 0 && name.length === 0 && // filter check box 
                                     searchProduct.map(product => <StoreProduct key={product.id} data={product}/> )
                             }
-                            
+            
                         </div>
                     </div>
                      :

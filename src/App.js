@@ -1,5 +1,4 @@
 // Component
-import Navbar from "./Component/Navbar";
 import Filterbar from "./Component/Filterbar";
 import Main from "./Component/Main";
 import Navbardescktop from "./Component/Navbardescktop";
@@ -9,6 +8,7 @@ import Footer from "./Component/Footer";
 // Context
 import ContextProducts from "./context/ContextProducts";
 import ContextCart from "./context/ContextCart";
+import ContextFilter from "./context/ContextFilter";
 // react router dom
 import {Route, Routes, Navigate} from 'react-router-dom'
 
@@ -17,9 +17,10 @@ function App() {
     <div className="max-w-[1536px] mx-auto">
       <ContextProducts>
         <ContextCart>
+          <ContextFilter>
           <Navbardescktop>
               <Navbardescktop/>
-              <Navbar />
+              
               <Filterbar />
               <Routes>
                 <Route path="/cart" element={<CartProducts/>}/>
@@ -29,6 +30,7 @@ function App() {
               </Routes>
             <Footer/>
           </Navbardescktop>
+          </ContextFilter>
         </ContextCart>
       </ContextProducts>
     </div>

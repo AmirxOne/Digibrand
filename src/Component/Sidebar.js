@@ -68,6 +68,7 @@ const Sidebar = () => {
             </div>
             <Example />
           </div>
+
           <div className="bg-slate-50 cursor-pointer w-full mt-5 overflow-hidden rounded-lg shadow-md">
             <img src={s1} alt=""/>
             <div className="px-3 py-5">
@@ -76,6 +77,7 @@ const Sidebar = () => {
               </span>
             </div>
           </div>
+
           <div className="bg-slate-50 cursor-pointer w-full mt-5 overflow-hidden rounded-lg shadow-md">
             <img src={s2} alt=""/>
             <div className="px-3 py-5">
@@ -83,15 +85,27 @@ const Sidebar = () => {
                   Realme UI 3.0 open beta announced for Narzo 30 Pro 5G.
               </span>
             </div>
-            <div className="bg-slate-50 cursor-pointer w-full mt-5 overflow-hidden rounded-lg shadow-md">
+          </div>
+
+          <div className="bg-slate-50 cursor-pointer w-full mt-5 overflow-hidden rounded-lg shadow-md">
             <img src={s1} alt=""/>
             <div className="px-3 py-5">
               <span className="font-light">
-                  Pixel 7 Pro's display will be brighter than the 6 Pro panel, source code reveals.
+                Pixel 7 Pro's display will be brighter than the 6 Pro panel, source code reveals.
               </span>
             </div>
           </div>
+
+          <div className="bg-slate-50 cursor-pointer w-full mt-5 overflow-hidden rounded-lg shadow-md">
+            <img src={s2} alt=""/>
+            <div className="px-3 py-5">
+              <span className="font-light">
+                  Realme UI 3.0 open beta announced for Narzo 30 Pro 5G.
+              </span>
+            </div>
           </div>
+
+          
         </div>
       </div>
   );
