@@ -13,14 +13,19 @@ const Store = () => {
 
     const {text} = useContext(serchContext);
 
-    const {name} = useContext(filterContext);
-    console.log(name)
+    const contextCtx = useContext(filterContext);
+    console.log(contextCtx.name)
+
+    console.log(contextCtx.categore)
     
 
      // filter check box 
+     
 
     const searchProduct = products.filter(product => product.title.toLowerCase().includes(text.toLowerCase()));
-    const checkProduct = products.filter(product => product.brand.toLowerCase().includes(name.toLowerCase()));// filter check box 
+    const checkProduct = products.filter(product => product.brand.toLowerCase().includes(contextCtx.name.toLowerCase()));// filter check box 
+    const categoryProduct = products.filter(product => product.category.toLowerCase().includes(contextCtx.categore.toLowerCase()));
+    console.log(categoryProduct)
     
     return (
         <>
@@ -34,14 +39,24 @@ const Store = () => {
 
                             }
                             {
-                                name.length > 0 && 
+                                contextCtx.name.length > 0 && 
                                     checkProduct.map(product => <StoreProduct key={product.id} data={product}/> ) // filter check box 
 
                             }
                             {
-                                text.length === 0 && name.length === 0 && // filter check box 
+                                text.length === 0 && contextCtx.name.length === 0 && // filter check box 
                                     searchProduct.map(product => <StoreProduct key={product.id} data={product}/> )
                             }
+
+                            {
+                                contextCtx.categore.length > 0 && 
+                                    categoryProduct.map(product => <StoreProduct key={product.id} data={product}/> ) // filter check box 
+
+                            }
+                            {/* {
+                                contextCtx.categore.length === 0 && // filter check box 
+                                    searchProduct.map(product => <StoreProduct key={product.id} data={product}/> )
+                            } */}
             
                         </div>
                     </div>

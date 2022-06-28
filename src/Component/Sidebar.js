@@ -1,17 +1,30 @@
-import React from "react";
+import React,{useState,useContext} from "react";
 import Example from "../Component/Example";
 // images
 import s1 from '../img/gsmarena_000.jpg';
 import s2 from '../img/gsmarena_001.jpg';
+// context 
+import { filterContext } from '../context/ContextFilter';
 
 const Sidebar = () => {
+
+  const [categore, setCategore] = useState("");
+  console.log(categore)
+
+  const clickHandler = (event) => {
+    setCategore(event.target.dataset.name)
+  }
+  const contextCtx = useContext(filterContext)
+    contextCtx.FCategore(categore)
+  
+
   return (
       <div className='hidden md:grid pl-5 md:col-span-4 row-span-2 mid:col-span-3 xlup:col-span-2'>
         <div className="">
           <div className="w-full py-10 px-2 bg-stone-50 rounded-lg shadow-lg ">
             <div className="text-orange-500 font-extrabold px-2">Grouping</div>
             <ul className="flex flex-col gap-">
-              <li className="flex w pl-2 py-3 mt-2 hover:bg-slate-100 rounded-lg ">
+              <li onClick={clickHandler} data-name="Phone" className="flex w pl-2 py-3 mt-2 hover:bg-slate-100 rounded-lg ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 stroke-gray-400"
@@ -28,7 +41,7 @@ const Sidebar = () => {
                 </svg>
                 <span className="px-4 text-gray-400 font-light">Smart Phone</span>
               </li>
-              <li className="flex w pl-2 py-3 hover:bg-slate-100 rounded-lg ">
+              <li onClick={clickHandler} data-name="Laptop" className="flex w pl-2 py-3 hover:bg-slate-100 rounded-lg ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 stroke-gray-400"
@@ -45,7 +58,7 @@ const Sidebar = () => {
                 </svg>
                 <span className="px-4 text-gray-400 font-light">Laptop</span>
               </li>
-              <li className="flex w pl-2 py-3 mb-2 hover:bg-slate-100 rounded-lg">
+              <li onClick={clickHandler} data-name="Watch" className="flex w pl-2 py-3 mb-2 hover:bg-slate-100 rounded-lg">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 stroke-gray-400"
