@@ -24,9 +24,9 @@ const ContextFilter = ({children}) => {
 
     const dataFilter = {
         check:check,
-        FCategore:FCategore,
         name:name,
         categore:categore,
+        FCategore:FCategore,
     }
 
 

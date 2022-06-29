@@ -32,7 +32,7 @@ const Store = () => {
             {
                 products.length !== 0 ?
                     <div className='grid col-span-12 md:col-span-8 md:pr-2 mid:col-span-9 xl:col-span-10 xlup:col-span-10'>
-                        <div className="py-2 px-5 md:px-0 w-full grid grid-cols-1 s:grid-cols-2 lg:grid-cols-4 md:grid-cols-3  gap-x-2 gap-y-4">
+                        <div className="py-2 px-5 md:px-0 w-full grid grid-rows-4 grid-cols-1 s:grid-cols-2 lg:grid-cols-4 md:grid-cols-3  gap-x-2 gap-y-4">
                             {
                                 text.length > 0 && 
                                     searchProduct.map(product => <StoreProduct key={product.id} data={product}/> ) 
@@ -40,24 +40,40 @@ const Store = () => {
                             }
                             {
                                 contextCtx.name.length > 0 && 
-                                    checkProduct.map(product => <StoreProduct key={product.id} data={product}/> ) // filter check box 
+                                    checkProduct.map(product => <StoreProduct key={product.id} data={product}/> ) 
 
                             }
                             {
-                                text.length === 0 && contextCtx.name.length === 0 && // filter check box 
+                                contextCtx.name.length > 0 && contextCtx.categore.length > 0 &&
+                                    checkProduct.map(product => <StoreProduct key={product.id} data={product}/> ) 
+
+                            }
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            {
+                                text.length === 0 && contextCtx.name.length === 0 && contextCtx.categore.length === 0 && 
                                     searchProduct.map(product => <StoreProduct key={product.id} data={product}/> )
                             }
 
                             {
                                 contextCtx.categore.length > 0 && 
-                                    categoryProduct.map(product => <StoreProduct key={product.id} data={product}/> ) // filter check box 
+                                    categoryProduct.map(product => <StoreProduct key={product.id} data={product}/> ) 
 
                             }
-                            {/* {
-                                contextCtx.categore.length === 0 && // filter check box 
-                                    searchProduct.map(product => <StoreProduct key={product.id} data={product}/> )
-                            } */}
-            
+
                         </div>
                     </div>
                      :
