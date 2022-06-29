@@ -47,7 +47,7 @@ const Store = () => {
                                 contextCtx.name.length > 0 && contextCtx.categore.length > 0 &&
                                     checkProduct.map(product => <StoreProduct key={product.id} data={product}/> ) 
 
-                            }
+                            } 
                             
 
 
