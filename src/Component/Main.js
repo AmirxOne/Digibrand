@@ -3,8 +3,6 @@ import React from 'react';
 import Store from "../Component/Store";
 import Filterdescktop from './Filterdescktop';
 import Sidebar from './Sidebar';
-// react router dom
-import {Routes, Route} from 'react-router-dom'
 
 const Main = () => {
     return (

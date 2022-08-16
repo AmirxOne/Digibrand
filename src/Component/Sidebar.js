@@ -9,10 +9,8 @@ import { filterContext } from '../context/ContextFilter';
 const Sidebar = () => {
 
   const [categore, setCategore] = useState("");
-  console.log(categore)
 
   const clickHandler = (event) => {
-    console.log(event)
     setCategore(event.target.dataset.name)
   }
   const contextCtx = useContext(filterContext)

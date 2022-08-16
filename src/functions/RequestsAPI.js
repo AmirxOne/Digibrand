@@ -4,5 +4,7 @@ const BaseApi = "https://react-api-23b25-default-rtdb.firebaseio.com/-N4wt8S-bN8
 
 export const getApi = async () => {
     const result = await axios.get(`${BaseApi}`)
+    console.log(result.data)
     return result.data
+    
 }

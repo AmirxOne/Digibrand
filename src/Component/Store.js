@@ -14,10 +14,6 @@ const Store = () => {
     const {text} = useContext(serchContext);
 
     const contextCtx = useContext(filterContext);
-    console.log(contextCtx.name)
-
-    console.log(contextCtx.categore)
-    
 
      // filter check box 
      
@@ -25,7 +21,7 @@ const Store = () => {
     const searchProduct = products.filter(product => product.title.toLowerCase().includes(text.toLowerCase()));
     const checkProduct = products.filter(product => product.brand.toLowerCase().includes(contextCtx.name.toLowerCase()));// filter check box 
     const categoryProduct = products.filter(product => product.category.toLowerCase().includes(contextCtx.categore.toLowerCase()));
-    console.log(categoryProduct)
+
     
     return (
         <>

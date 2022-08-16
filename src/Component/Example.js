@@ -10,7 +10,6 @@ import { filterContext } from '../context/ContextFilter';
 export default function Example() {
 
   const [check, setCheck] = useState(false);
-  console.log(check)
 
   const chengHandler = (event) => {
       setCheck(false)
@@ -19,7 +18,6 @@ export default function Example() {
   } 
 
 const [name, setName] = useState("");
-console.log(name)
 
 const contextCtx = useContext(filterContext)
 contextCtx.check(name)
